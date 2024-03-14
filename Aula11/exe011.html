@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificar Nacionalidade</title>
+</head>
+<body>
+
+<h2>Digite sua nacionalidade:</h2>
+<input type="text" id="pais">
+<button onclick="verificarNacionalidade()">Verificar</button>
+
+<p id="mensagem"></p>
+
+<script>
+function verificarNacionalidade() {
+  // Obter o valor digitado pelo usuário
+  var nacionalidade = document.getElementById("pais").value;
+
+  // Verificar se a nacionalidade é Angola
+  if (nacionalidade.toLowerCase() === "angola") {
+    // Se sim, exibir a mensagem de nacionalidade angolana
+    document.getElementById("mensagem").innerHTML = "Sua nacionalidade é angolana.";
+  } else {
+    // Caso contrário, exibir uma mensagem genérica
+    document.getElementById("mensagem").innerHTML = "Sua nacionalidade não é angolana.";
+  }
+}
+</script>
+
+</body>
+</html>

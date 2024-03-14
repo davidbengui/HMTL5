@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário</title>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .container input[type="text"],
+  .container button {
+    padding: 8px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .container button:hover {
+    background-color: #0056b3;
+  }
+
+  .container button:focus {
+    outline: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Digite sua nacionalidade:</h2>
+  <input type="text" id="nacionalidadeInput">
+  <button onclick="verificarNacionalidade()">Verificar</button>
+</div>
+
+<div class="container">
+  <h2>Digite sua profissão:</h2>
+  <input type="text" id="profissaoInput">
+  <button onclick="verificarProfissao()">Verificar</button>
+</div>
+
+<p id="mensagem"></p>
+
+<script>
+function verificarNacionalidade() {
+  var nacionalidade = document.getElementById("nacionalidadeInput").value;
+  document.getElementById("mensagem").innerHTML = "Sua nacionalidade é: " + nacionalidade;
+}
+
+function verificarProfissao() {
+  var profissao = document.getElementById("profissaoInput").value;
+  document.getElementById("mensagem").innerHTML = "Sua profissão é: " + profissao;
+}
+</script>
+
+</body>
+</html>

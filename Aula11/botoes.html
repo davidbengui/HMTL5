@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nacionalidade</title>
+
+<style>
+    .container {
+        display: flex; /* Define o layout como flexível */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-bottom: 10px;
+    }
+
+    .container input[type="text"] {
+        padding: 8px;
+        margin-right: 4px; /* Adiciona um espaço entre o input e o botão */
+        box-sizing: border-box;
+        flex: 1; /* O input expande para ocupar o espaço disponível */
+    }
+
+    .container button {
+        padding: 8px;
+        background-color: #3a1ce2;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .container button:hover {
+        background-color: #0056b3;
+    }
+
+    .container button:focus {
+        outline: none;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>Introduza a sua informacao</h2>
+
+<div class="container">
+    <input type="text" id="pais">
+    <button onclick="nacionalidade()"> Verificar Nacionalidade</button>
+</div>
+
+<div class="container">
+    <input type="text" id="idade">
+    <button onclick="idadee()"> Verificar Idade</button>
+</div>
+
+<div class="container">
+    <input type="text" id="estado">
+    <button onclick="estado()"> Verificar Estado</button>
+</div>
+
+<div class="container">
+    <input type="text" id="morada">
+    <button onclick="morada()"> Verificar Morada</button>
+</div>
+
+<div class="container">
+    <input type="text" id="rua">
+    <button onclick="rua()"> Verificar Rua</button>
+</div>
+
+<p id="resultado"></p>
+
+<script>
+    function nacionalidade() {
+        var nacio = document.getElementById("pais").value.trim();
+        if (nacio === "") {
+            document.getElementById("resultado").innerHTML = "Por favor, digite a sua nacionalidade.";
+        } else {
+            if (nacio.toLowerCase() === "angola") {
+                document.getElementById("resultado").innerHTML = "Sua Nacionalidade é angolana.";
+            } else {
+                document.getElementById("resultado").innerHTML = "Você não é angolano.";
+            }
+        }
+    }
+
+    function idadee() {
+        var idad = document.getElementById("idade").value;
+        var iid = Number(idad);
+        if (iid > 50) {
+            document.getElementById("resultado").innerHTML = "A sua idade está a caminho da velhice.";
+        } else {
+            document.getElementById("resultado").innerHTML = "Você ainda está jovem.";
+        }
+    }
+</script>
+
+</body>
+</html>
